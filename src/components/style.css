@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding:0;
+    margin: 0 ;
+    font-family: 'Mukta', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 150px;
+    flex-direction: column;
+    width: 300px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.input-tab{
+    display: flex;
+    /* border:1px solid black; */
+    /* border: none; */
+    /* border-radius: 25px; */
+    border: 1px solid black;
+    width: 100%;
+    justify-content: center;
+}
+
+.input-field{
+    border-radius: 25px;
+    height: 30px;
+    width: 150px;
+    padding: 15px;
+}
+
+.info{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    justify-content: center;
+}
+.position{
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.fas{
+    /* border: 1px solid black; */
+    padding-right: 7px;
+    padding-top: 7px;
+    
+}
+
+.temperature{
+    border: 1px solid black;
+    padding-left: 30%;
+}
+
+.temp-ma-min{
+    border: 1px solid black;
+    justify-content: center;
+    /* padding: 5px; */
+    /* margin-left: 15px; */
+    width: 100%;
+    font-size: 12px;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: black;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: draft 3000ms infinite linear;
+    z-index: 1;
+}
+
+.wave-third{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
+
+.wave-sec{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+}
