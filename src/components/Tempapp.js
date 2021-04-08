@@ -4,6 +4,7 @@ import "./style.css";
 
 const TempApp=()=>{
 
+    // const [weath, setWeather]=useState(null);
     const [city, setCity] = useState(null);
     const [Query, setQuery] = useState(""); 
 
@@ -15,21 +16,26 @@ const TempApp=()=>{
             const resToJson=await res.json();
             // console.log(resToJson);
             setCity(resToJson.main);
+            // setWeather(resToJson.weather);
+            
         }
         fetchApi()
     },[Query])
 
     return(
         <Fragment>
+            <div className="container">
             <div className="box">
             {/* input field */}
                 <div className="input-tab">
                     <input 
                         className="input-field" 
                         type="search" 
+                        placeholder="Enter City Name here"
                         onChange={(event)=>{
                             setQuery(event.target.value)
-                        }}    
+                        }
+                        }    
                     />
                 </div>
                 {
@@ -45,12 +51,13 @@ const TempApp=()=>{
                             <h1 className="temperature">{city.temp} °C</h1>
 
                             <h3 className="temp-ma-min">
-                                Min. temp : {city.temp_min} °C  |  Max. temp : {city.temp_max} °C
+                                <div>Min. temp : {city.temp_min} °C </div>
+                                <div>Max. temp : {city.temp_max} °C </div>
                             </h3>
-                    
                         </div>
                         </div>
                     )
+                    
                 }
                 
 
@@ -58,7 +65,7 @@ const TempApp=()=>{
                 <div className="wave -sec"></div>
                 <div className="wave -third"></div>   */}
             </div>
-  
+            </div>
         </Fragment>
     )
 }
